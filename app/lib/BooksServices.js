@@ -16,7 +16,7 @@ var BooksManager = {
 		var file = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory + "sampleData/data.json"); 
 	
 		books = JSON.parse(file.read().text).books;
-		Alloy.Globals.booksGlobal = books;
+//		Alloy.Globals.booksGlobal = books;
 	},
 	
 	/**
@@ -29,13 +29,13 @@ var BooksManager = {
 	},
 	
 	/**
- 	  *	Adds a book into the main books array.
+ 	  *	Adds a book into the main books array at the beginning.
  	  * 
  	  * @param {object} book - a book object from the controller.
  	  */
 	insertBook: function(book) {
 		books.unshift(book);
-		Alloy.Globals.booksGlobal = books;
+//		Alloy.Globals.booksGlobal = books;
 	}	
 };
 module.exports = BooksManager;
