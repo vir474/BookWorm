@@ -26,81 +26,14 @@ function init(){
 		return book.title;
 	});
 */	
-	if(books) {
-		
-//		indexes = [];
-//		var sections = [];
-/*	
-		var bookGroups  = _.groupBy(books, function(book){
-		 	return book.title.charAt(0).toUpperCase();
-		});
-*/		
+	if(books) {	
 		var dataToAdd = preprocessForListView(books);
-//alert(JSON.stringify(dataToAdd)); 
- /*       
-		_.each(bookGroups, function(group){
-
-			/**
-			 * Take the group data that is passed into the function, and parse/transform
-			 * it for use in the ListView templates as defined in the directory.xml file.
-			 */
-/*			var dataToAdd = preprocessForListView(group);
-
-			/**
-			 * Check to make sure that there is data to add to the table,
-			 * if not lets exit
-			 */
-/*			if(dataToAdd.length < 1) return;
-			
-			/**
-			 * Create the ListViewSection header view
-			 * DOCS: http://docs.appcelerator.com/platform/latest/#!/api/Titanium.UI.ListSection-property-headerView
-			 */
-
-/*			 var sectionHeader = Ti.UI.createView({
-			 	backgroundColor: "#ececec",
-			 	width: Ti.UI.FILL,
-			 	height: 30
-			 });
-
-			 /**
-			  * Create and Add the Label to the ListView Section header view
-			  */
-/*			 var sectionLabel = Ti.UI.createLabel({
-			 	text: group[0].title.charAt(0).toUpperCase(),
-			 	left: 20,
-			 	font:{
-			 		fontSize: 20
-			 	},
-			 	color: "#666"
-			 });
-			 sectionHeader.add(sectionLabel);
-
-			/**
-			 * Create a new ListViewSection, and ADD the header view created above to it.
-			 */
-/*			 var section = Ti.UI.createListSection({
-				headerView: sectionHeader
-			});
-
-			/**
-			 * Add Data to the ListViewSection
-			 */
-/*			section.items = dataToAdd;
-			
-			/**
-			 * Push the newly created ListViewSection onto the `sections` array. This will be used to populate
-			 * the ListView 
-			 */
-//			sections.push(section);
-//		});
 
 		/**
 		 * Add the ListViewSections and data elements created above to the ListView
 		 */
-//alert($.bookListView.sections[0]);	
+	
 		$.bookListView.sections[0].setItems(dataToAdd);	
-//		$.bookListView.sections[0].setItems(dataToAdd);
 	}
 };
 
@@ -128,10 +61,13 @@ var preprocessForListView = function(rawData) {
 	});	
 };
 
-init();
-
+/**
+  * Create a custom event to be fired whenever the list view needs to be updated
+  * 
+  */
 Ti.App.addEventListener("refresh-data", function(e){
 	init();
 });
 
+init();
 $.index.open();
