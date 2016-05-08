@@ -1,0 +1,78 @@
+".container": {
+	backgroundColor:"white"
+},
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+},
+
+".template":{
+	height: 100,
+	width: Ti.UI.FILL
+},
+
+".title":{
+	font:{
+		fontSize: 14,
+		fontWeight : 'bold'
+	},
+	left: 20,
+	top: 10,
+	color: "#757575",
+	height: 20,
+	width: Ti.UI.FILL,
+   	maxLines: 1,
+   	wordWrap: false,
+   	ellipsize: true
+},
+
+".year":{
+	font:{
+		fontSize: 12
+	},
+	left: 20,
+	top: 30,
+	color: "#424242",
+	height: 20,
+	width: Ti.UI.FILL,
+	maxLines: 1,
+	wordWrap: false,
+   	ellipsize: true
+},
+
+".genre":{
+	font:{
+		fontSize: 12
+	},
+	left: 20,
+	top: 50,
+	color: "#424242",
+	height: 20,
+	width: Ti.UI.FILL,
+	maxLines: 1,
+	wordWrap: false,
+   	ellipsize: true
+},
+
+".author":{
+	font:{
+		fontSize: 12,
+		fontWeight: "italic"
+	},
+	left: 20,
+	top: 70,
+	color: "#424242",
+	height: 20,
+	width: Ti.UI.FILL,
+	maxLines: 1,
+	wordWrap: false,
+   	ellipsize: true
+},
+
+"#bookListView":{
+	tintColor: "#555",
+	backgroundColor:"#fff",
+	separatorColor: "#BDBDBD"
+}

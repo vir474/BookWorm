@@ -1,0 +1,10 @@
+<Alloy>
+	<Window id="addWin" title="Add Book" class="container" onOpen="focusTitleField">
+		<ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="closeWindow" />
+  		<TextField id="title" name="Title" hintText="Title of the book" returnKeyType="Titanium.UI.RETURNKEY_NEXT" />
+  		<TextField id="year" name="Year" maxLength="4" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD" hintText="Year the book was published" returnKeyType="Titanium.UI.RETURNKEY_NEXT"/>
+  		<TextField id="genre" name="Genre" hintText="Genre of the book" returnKeyType="Titanium.UI.RETURNKEY_NEXT"/>
+  		<TextField id="author" name="Author" hintText="Author of the book" onReturn="closeKeyboard"/>
+  		<Button class="button" onClick="addBook">Add Book</Button>
+	</Window>
+</Alloy>

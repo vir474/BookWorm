@@ -1,0 +1,23 @@
+<Alloy>
+	<Window class="container" backgroundColor="white">
+        <ListView id="bookListView" defaultItemTemplate="bookItem">
+            <Templates>
+                <ItemTemplate id="bookItem" name="bookItem" class="template">
+                    <Label bindId="title" id="title" class="title" />
+                    <Label bindId="year" id="year" class="year" />
+                    <Label bindId="genre" id="genre" class="genre" />
+                    <Label bindId="author" id="author" class="author" />
+                </ItemTemplate>
+            </Templates>
+            <ListSection/>
+        </ListView>
+        
+		<!-- Menu -->
+		<Menu platform="android">
+			<MenuItem
+			title="Add book"
+			onClick="addBook"
+			showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM" />
+		</Menu>
+	</Window>
+</Alloy>
